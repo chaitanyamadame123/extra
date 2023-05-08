@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Display the hotel menu
+echo "Welcome to the Hotel Menu!"
+echo "--------------------------"
+echo "1. Breakfast"
+echo "2. Lunch"
+echo "3. Dinner"
+echo "4. Exit"
+
+# Ask the user to choose an option
+read -p "Enter your choice: " choice
+
+# Evaluate the user's choice
+case $choice in
+  1)
+    echo "Breakfast Menu:"
+    echo "1. Continental Breakfast - $10"
+    echo "2. American Breakfast - $15"
+    echo "3. Vegan Breakfast - $12"
+    ;;
+  2)
+    echo "Lunch Menu:"
+    echo "1. Sandwich and Chips - $10"
+    echo "2. Caesar Salad - $12"
+    echo "3. Grilled Chicken - $15"
+    ;;
+  3)
+    echo "Dinner Menu:"
+    echo "1. Steak and Potatoes - $25"
+    echo "2. Seafood Platter - $30"
+    echo "3. Vegetarian Pasta - $20"
+    ;;
+  4)
+    echo "Goodbye!"
+    exit
+    ;;
+  *)
+    echo "Invalid option"
+    ;;
+esac
